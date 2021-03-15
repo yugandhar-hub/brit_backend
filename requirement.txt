@@ -1,0 +1,13 @@
+Flask==1.0.2
+Flask-cors==3.0.4
+flask-restplus==0.13.0
+numpy
+pandas==1.0.1
+enum34==1.1.6
+pyYAML
+coverage==4.5.4
+requests==2.18.4
+psycopg2-binary
+xlrd
+Werkzeug==0.16.1
+sqlalchemy

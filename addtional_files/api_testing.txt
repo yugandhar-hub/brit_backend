@@ -1,0 +1,71 @@
+GET DEPARTMENTS API:
+-----------------
+API ENDPOINT : http://127.0.0.1:5000/departments
+API Type     : GET
+API RESULTS  :
+{
+    "departments": [
+        "Sales",
+        "Lakshya"
+    ]
+}
+
+GET REPORTS API:
+-----------------
+API ENDPOINT : http://127.0.0.1:5000/reports?department=Sales
+API Type     : GET
+API PARAM    : department=Sales
+API BODY     : NO
+API RESULTS  :
+[
+    {
+        "id": 1,
+        "department_name": "Sales",
+        "report_name": "NSM REPORT",
+        "report_url": "https://reports.britindia.com/#/views/4MonthsNSMReport/4MonthsNSMReport?:iid=1"
+    },
+    {
+        "id": 2,
+        "department_name": "Sales",
+        "report_name": "JAN2020TOMAR2020",
+        "report_url": "https://reports.britindia.com/#/views/JAN2020TOMAR2020/202001to202003?:iid=2 "
+    },
+    {
+        "id": 5,
+        "department_name": "Sales",
+        "report_name": "PRIMARYVSSECONDARY",
+        "report_url": "https://reports.britindia.com/#/workbooks/1041/views"
+    }
+]
+
+
+ADD REPORTS API:
+-----------------
+API ENDPOINT : http://127.0.0.1:5000/addreports
+API Type     : POST
+API PARAM    : NO
+API BODY     : {
+                 "department_name": "Sales",
+                 "report_name": "CLOSINGSTOCK",
+                 "report_url": "https://reports.britindia.com/#/views/CLOSINGSTOCK/CLOSINGSTOCK"
+               }
+
+API RESULTS  :
+{
+    "status": "report added successfully"
+}
+
+
+DELETE REPORTS API:
+-----------------
+API ENDPOINT : http://127.0.0.1:5000/deletereports
+API Type     : POST
+API PARAM    : NO
+API BODY     : {
+                 "ids":[6]
+               }
+
+API RESULTS  :
+{
+    "status": "report added successfully"
+}
